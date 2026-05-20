@@ -242,16 +242,16 @@ app.post("/webhook", async (req, res) => {
     let mode = db.mode.get(user_id) || "auto";
 
     let model = "meta/llama-3.1-70b-instruct";
-    let max_tokens = 300;
+    let max_tokens = 450;
 
     if (mode === "fast") {
       model = "meta/llama-3.1-8b-instruct";
-      max_tokens = 150;
+      max_tokens = 300;
     }
 
     if (mode === "smart") {
       model = "meta/llama-3.1-70b-instruct";
-      max_tokens = 400;
+      max_tokens = 850;
     }
 
     if (mode === "auto") {
